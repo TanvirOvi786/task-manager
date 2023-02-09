@@ -15,4 +15,5 @@ router.post("/createTask", VerifySection, TasksController.createTask);
 router.get("/updateTaskStatus/:id/:status", VerifySection, TasksController.updateTaskStatus);
 router.get("/listTaskByStatus/:status", VerifySection, TasksController.listTaskByStatus);
 router.get("/taskStatusCount", VerifySection, TasksController.taskStatusCount);
+router.get("/deleteTask/:id", VerifySection, TasksController.deleteTask);
 module.exports = router;
