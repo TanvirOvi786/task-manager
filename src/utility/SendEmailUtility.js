@@ -3,17 +3,21 @@ var nodemailer = require('nodemailer');
 const SendEmailUtility = async (EmailTo, EmailText, EmailSubject) => {
 
     let transporter = nodemailer.createTransport({
-        service: 'gmail',
-
+        host: 'smtp.ionos.com',
+        port: '587',
+        secure: false,
         auth: {
-            user: "tanvirahnmedovi.main@gmail.com",
-            pass: 'erukfixdyfhfrkul'
-        }
+            user: "info@tanvirahmedovi.com",
+            pass: 'tanvir786ovi'
+        },
+        tls: {
+            rejectUnauthorized: false
+        },
     });
 
 
     let mailOptions = {
-        from: 'Task Manager MERN <tanvirahnmedovi.main@gmail.com>',
+        from: 'Task Manager MERN <info@tanvirahmedovi.com>',
         to: EmailTo,
         subject: EmailSubject,
         text: EmailText
