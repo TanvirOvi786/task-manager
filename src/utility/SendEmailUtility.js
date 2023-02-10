@@ -3,15 +3,14 @@ var nodemailer = require('nodemailer');
 const SendEmailUtility = async (EmailTo, EmailText, EmailSubject) => {
 
     let transporter = nodemailer.createTransport({
-        service: 'smtp.ionos.com',
         host: 'mail.tanvirahnmedovi.com',
         port: 587,
-        secure: true,
+        secure: false,
         auth: {
             user: "info@tanvirahnmedovi.com",
             pass: 'tanvir786ovi'
         }, tls: {
-            rejectUnauthorized: true
+            rejectUnauthorized: false
         },
     });
 
