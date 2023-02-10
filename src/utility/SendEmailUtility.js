@@ -6,12 +6,12 @@ const SendEmailUtility = async (EmailTo, EmailText, EmailSubject) => {
         service: 'smtp.ionos.com',
         host: 'mail.tanvirahnmedovi.com',
         port: 587,
-        secure: false,
+        secure: true,
         auth: {
             user: "info@tanvirahnmedovi.com",
             pass: 'tanvir786ovi'
         }, tls: {
-            rejectUnauthorized: false
+            rejectUnauthorized: true
         },
     });
 
