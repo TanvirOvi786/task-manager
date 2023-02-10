@@ -11,6 +11,10 @@ router.post("/login", UsersController.login);
 router.post("/profileUpdate", VerifySection, UsersController.profileUpdate);
 router.get("/profileDetails", VerifySection, UsersController.profileDetails);
 
+router.get("/RecoverVerifyEmail/:email", UsersController.RecoverVerifyEmail);
+router.get("/RecoverVerifyOTP/:email/:otp", UsersController.RecoverVerifyOTP);
+router.post("/RecoverResetPass", UsersController.RecoverResetPass);
+
 //tasks
 router.post("/createTask", VerifySection, TasksController.createTask);
 router.get("/updateTaskStatus/:id/:status", VerifySection, TasksController.updateTaskStatus);
