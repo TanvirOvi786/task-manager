@@ -13,6 +13,9 @@ const xss = require('xss-clean');
 const helmet = require('helmet');
 const mongoSinitize = require('express-mongo-sanitize');
 
+app.use(express.json({ limit: '100mb' }));
+app.use(express.urlencoded({ limit: '100mb' }));
+
 //database
 const mongoose = require('mongoose');
 // app.use(express.static('client/build'));
