@@ -93,6 +93,10 @@ exports.RecoverVerifyEmail = async (req, res) => {
     }
 
 }
+
+
+
+
 exports.RecoverVerifyOTP = async (req, res) => {
     let email = req.params.email;
     let OTPCode = req.params.otp;
@@ -140,5 +144,4 @@ exports.RecoverResetPass = async (req, res) => {
         res.status(200).json({ status: "fail", data: e })
     }
 }
-
 
