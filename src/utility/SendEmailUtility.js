@@ -10,7 +10,7 @@ const SendEmailUtility = async (EmailTo, EmailText, EmailSubject) => {
             user: "tanvirahnmedovi.main@gmail.com",
             pass: 'lhdrpauqvpnoafbp'
         }, tls: {
-            rejectUnauthorized: false
+            rejectUnauthorized: true
         },
     });
 
